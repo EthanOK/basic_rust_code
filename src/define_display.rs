@@ -13,8 +13,8 @@ impl fmt::Display for Complex {
 }
 pub fn display_complex() {
     let complex = Complex {
-        real: 2.0,
-        imaginary: 7.0,
+        real: 2.1,
+        imaginary: 7.5,
     };
 
     println!("Display: {}", complex);
