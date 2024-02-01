@@ -51,4 +51,11 @@ pub fn def_float_type() {
     避免在浮点数上测试相等性
     不能作为HashMap的Key
     */
+
+    println!("{}", (0.1_f64 + 0.2 - 0.3).abs() < 0.000001);
+
+    let nan = (-42.1_f64).sqrt();
+    if nan.is_nan() {
+        println!("Result is NaN");
+    }
 }
