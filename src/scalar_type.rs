@@ -1,3 +1,7 @@
+/*
+scalar type: integer float bool chart
+*/
+
 pub fn def_int_type() {
     // 整数类型
     // i8 i16 i32 i64 i128 isize
@@ -58,4 +62,69 @@ pub fn def_float_type() {
     if nan.is_nan() {
         println!("Result is NaN");
     }
+}
+
+pub fn numeric_operate() {
+    // 只能同类型才能参与计算
+
+    // 编译器 自动推导数据类型
+    let sum = 5 + 10;
+
+    println!("{}", sum);
+
+    // 不同类型之间不能直接运算 23.9 - 5
+    let difference = 95.5 - 4.0;
+    println!("{}", difference);
+
+    let product = 4 * 30;
+    println!("{}", product);
+    // 除法
+    let quotient = 56 / 32;
+    println!("{}", quotient);
+}
+
+pub fn bit_operate() {
+    // 位运算
+    // & | ^ ! << >>
+
+    // 00000010
+    let a = 2;
+    // 00000011
+    let b = 3;
+    println!("(a & b) = {}", a & b);
+    println!("(a | b) = {}", a | b);
+    // 异或
+    println!("(a ^ b) = {}", a ^ b);
+    println!("(!b) = {}", !b);
+    println!("(a << b) = {}", a << b);
+    println!("(a >> b) = {}", a >> b);
+
+    let mut a = a;
+    // a = a << b;
+    a <<= b;
+    println!("(a << b) = {}", a);
+}
+
+pub fn bool_type() {
+    // 布尔类型
+    // bool
+
+    let t = true;
+    let f: bool = false;
+
+    println!("{:?}", t);
+    println!("{:?}", f);
+}
+
+pub fn char_type() {
+    // 字符类型
+    // char
+
+    let c = 'z';
+    let z = 'ℤ';
+    let heart_eyed_cat = '🤔';
+
+    println!("{:?}", c);
+    println!("{:?}", z);
+    println!("{:?}", heart_eyed_cat);
 }
