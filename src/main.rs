@@ -1,4 +1,5 @@
 pub mod define_display;
+pub mod define_func;
 pub mod define_variable;
 pub mod hello_world;
 pub mod num_library;
@@ -35,5 +36,7 @@ fn main() {
 
     // scalar_type::char_type();
 
-    scalar_type::unit_type();
+    // scalar_type::unit_type();
+
+    define_func::statement_expression();
 }
