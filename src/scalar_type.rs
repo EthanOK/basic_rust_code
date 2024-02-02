@@ -1,3 +1,4 @@
+use crate::utils::size_of_val;
 /*
 scalar type: integer float bool chart
 */
@@ -119,12 +120,33 @@ pub fn bool_type() {
 pub fn char_type() {
     // 字符类型
     // char
+    // 占用 4 个字节
+    // Rust 中的字符包括 ASCII 和 Unicode
+    // 字符只能用 '' 表示
 
     let c = 'z';
     let z = 'ℤ';
-    let heart_eyed_cat = '🤔';
+    let heart_eyed_cat = '🌝';
 
     println!("{:?}", c);
     println!("{:?}", z);
     println!("{:?}", heart_eyed_cat);
+
+    println!("{:?}占用 {} 个字节", c, std::mem::size_of_val(&c))
+}
+
+pub fn unit_type() {
+    // 单元类型 （） 不占用内存
+    // main() 的返回值 就是 单元类型，并不是无返回值
+
+    //
+    let unit = ();
+
+    assert!(unit == ret_unit_type());
+
+    println!("{:?} 占用 {} 个字节", unit, size_of_val(&unit));
+}
+
+pub fn ret_unit_type() {
+    println!("return ()");
 }

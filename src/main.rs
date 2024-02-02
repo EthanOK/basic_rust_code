@@ -31,5 +31,9 @@ fn main() {
 
     // type_convert::u16_as_i32();
 
-    num_library::add_complex();
+    // num_library::add_complex();
+
+    // scalar_type::char_type();
+
+    scalar_type::unit_type();
 }
