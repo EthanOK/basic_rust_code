@@ -3,7 +3,9 @@ pub mod define_func;
 pub mod define_variable;
 pub mod hello_world;
 pub mod num_library;
+pub mod ownership;
 pub mod range_type;
+pub mod reference_borrowing;
 pub mod scalar_type;
 pub mod type_convert;
 pub mod utils;
@@ -38,5 +40,15 @@ fn main() {
 
     // scalar_type::unit_type();
 
-    define_func::statement_expression();
+    // define_func::statement_expression();
+
+    // ownership::ownership_ins();
+
+    // reference_borrowing::ref_bor();
+
+    // reference_borrowing::read_string_len();
+
+    // reference_borrowing::change_string_data();
+
+    reference_borrowing::mut_reference();
 }
