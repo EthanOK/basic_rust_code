@@ -1,8 +1,10 @@
+pub mod compound_type;
 pub mod define_display;
 pub mod define_func;
 pub mod define_variable;
 pub mod hello_world;
 pub mod num_library;
+pub mod operate_string;
 pub mod ownership;
 pub mod range_type;
 pub mod reference_borrowing;
@@ -50,5 +52,15 @@ fn main() {
 
     // reference_borrowing::change_string_data();
 
-    reference_borrowing::mut_reference();
+    // reference_borrowing::mut_reference();
+
+    // compound_type::remove_warning();
+
+    // compound_type::read_slice();
+
+    // operate_string::push_string();
+
+    // operate_string::insert_string();
+
+    operate_string::replace_string();
 }
