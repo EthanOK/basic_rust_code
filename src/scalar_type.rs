@@ -1,7 +1,8 @@
-use crate::utils::size_of_val;
 /*
 scalar type: integer float bool chart
 */
+
+use std::mem::size_of_val;
 
 pub fn def_int_type() {
     // 整数类型

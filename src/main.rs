@@ -62,5 +62,9 @@ fn main() {
 
     // operate_string::insert_string();
 
-    operate_string::replace_string();
+    // operate_string::replace_string();
+
+    // operate_string::delete_string();
+
+    operate_string::concatenate_string();
 }
