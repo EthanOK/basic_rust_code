@@ -1,5 +1,5 @@
 pub mod compound_type;
-pub mod contrl_flow;
+pub mod control_flow;
 pub mod define_display;
 pub mod define_func;
 pub mod define_variable;
@@ -84,9 +84,11 @@ fn main() {
 
     // compound_type::tuple_struct();
 
-    // contrl_flow::if_control();
+    // control_flow::if_control();
 
-    // contrl_flow::for_control();
+    // control_flow::for_control();
 
-    pattern_match::match_demo();
+    // pattern_match::match_demo();
+
+    pattern_match::matches_demo();
 }

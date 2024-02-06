@@ -37,3 +37,24 @@ pub fn if_let_demo() {
         println!("None");
     }
 }
+
+pub fn matches_demo() {
+    #[derive(Debug)]
+    enum MyEnum {
+        Foo,
+        Bar,
+    }
+    let v = [MyEnum::Foo, MyEnum::Bar, MyEnum::Foo];
+
+    let mut count = 0;
+
+    let pattern = MyEnum::Foo;
+
+    for e in v {
+        // matches!(expr, pattern) pattern 参数必须是模式 而不能是变量
+        if matches!(e, MyEnum::Foo) {
+            count += 1;
+        }
+    }
+    println!("{:?}出现了 {} 次", pattern, count);
+}
