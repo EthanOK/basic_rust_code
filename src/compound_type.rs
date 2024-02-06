@@ -166,9 +166,65 @@ pub fn array_type() {
 
     println!("{:?}", arr);
 
-    // 初始化某个 某个值 重复 N 次的数组  =[value; count]
+    // 初始化 某个值 重复 N 次的数组  =[value; count]
     let aar0 = [0; 4];
     println!("{:?}", aar0);
 
     println!("{}", arr[0]);
+}
+
+#[derive(Debug)]
+struct User {
+    username: String,
+    email: String,
+    id: u32,
+}
+pub fn struct_type() {
+    // 每个字段都要初始化 顺序可以不一致
+    let user1 = User {
+        username: String::from("zhang san"),
+        id: 1,
+        email: String::from("888888@gmail.com"),
+    };
+    println!("{:?}", user1);
+
+    let user2 = build_user("DJ".to_string(), 2);
+    println!("{:?}", user2);
+
+    // 结构体更新 语法 ..user1 必须在尾部
+    let user3 = User {
+        username: String::from("wang wu"),
+        ..user1
+    };
+    println!("{:?}", user3);
+    // username 和 email 的所有权 转移给了 user3
+    // println!("{:?}", user1.email);
+}
+
+fn build_user(username: String, id: u32) -> User {
+    User {
+        username,
+        email: String::from(""),
+        id,
+    }
+}
+
+pub fn tuple_struct() {
+    // 元组结构体 不需要初始化，可以直接使用
+    #[derive(Debug)]
+    struct Pair(i32, i32);
+
+    let pair = Pair(1, 2);
+    println!("{:?}", pair);
+
+    // 元组结构体 不需要初始化，可以直接使用
+    #[derive(Debug)]
+    struct Point3D(i32, i32, i32);
+
+    let point = Point3D(1, 2, 3);
+
+    // 拿走表达式所有权，还会把值的所有权返回
+    dbg!(&point);
+
+    println!("{:?}", point);
 }

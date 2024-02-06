@@ -76,5 +76,9 @@ fn main() {
 
     // compound_type::enum_type();
 
-    compound_type::array_type();
+    // compound_type::array_type();
+
+    // compound_type::struct_type();
+
+    compound_type::tuple_struct();
 }
