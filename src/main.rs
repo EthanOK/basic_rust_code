@@ -66,5 +66,15 @@ fn main() {
 
     // operate_string::delete_string();
 
-    operate_string::concatenate_string();
+    // operate_string::concatenate_string();
+
+    // operate_string::escape_string();
+
+    // operate_string::operate_utf8();
+
+    // compound_type::tuple_type();
+
+    // compound_type::enum_type();
+
+    compound_type::array_type();
 }

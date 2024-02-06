@@ -90,3 +90,85 @@ pub fn string_index() {
 
     println!("{}", s);
 }
+
+/*
+元组: 长度固定，顺序固定
+    场景：返回值
+ */
+pub fn tuple_type() {
+    // 创建元组
+    let t = (1, "hello");
+
+    // 解构元组
+    let (a, b) = t;
+    println!("{}, {}", a, b);
+
+    // 访问元组
+    println!("({}, {})", t.0, t.1)
+}
+
+/*
+枚举 enum
+任何类型的都数据都可以放入枚举成员
+Option<T>枚举，有值：Some(T) 无值：None ，T是一个泛型参数
+ */
+
+#[derive(Debug)]
+enum TokenType {
+    NULL,
+    ERC20,
+    ERC721,
+}
+
+#[derive(Debug)]
+enum Message {
+    Quit,
+    Move { x: i32, y: i32 },
+    Write(String),
+    ChangeColor(i32, i32, i32),
+}
+
+pub fn enum_type() {
+    let token_type = TokenType::NULL;
+    println!("{:?}", token_type);
+
+    let m1 = Message::Quit;
+    let m2 = Message::Move { x: 1, y: 2 };
+    let m3 = Message::Write(String::from("hello"));
+    let m4 = Message::ChangeColor(1, 2, 3);
+
+    println!("{:?}", m1);
+    println!("{:?}", m2);
+    println!("{:?}", m3);
+    println!("{:?}", m4);
+
+    // 使用 None 需要告诉  Option<T> 是什么类型
+    let v1: Option<i32> = None;
+
+    let v2 = Some(888);
+
+    let v3 = Some("a string");
+    println!("{:?}", v1);
+    println!("{:?}", v2);
+    println!("{:?}", v3);
+
+    println!("{}", v1.unwrap_or_default());
+    println!("{}", v2.unwrap_or_default());
+}
+
+/*
+长度固定： array 元素类型相同 顺序存放
+动态数组： Vector
+ */
+pub fn array_type() {
+    // 长度固定 存储在栈上 声明: [type; num]
+    let arr: [i8; 5] = [1, 2, 3, 4, 5];
+
+    println!("{:?}", arr);
+
+    // 初始化某个 某个值 重复 N 次的数组  =[value; count]
+    let aar0 = [0; 4];
+    println!("{:?}", aar0);
+
+    println!("{}", arr[0]);
+}

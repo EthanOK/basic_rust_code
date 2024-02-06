@@ -106,7 +106,7 @@ pub fn concatenate_string() {
     // Must: String + &str
     // + 的 右边 必须是 字符串的切片引用 &str,
     // std::string::add(self, s: &str) -> String
-    // &String = &str
+    // &String 可以隐式转换 &str
     //  s1 所有权 转移至 add(), 调用后释放，再使用会报错
     let s3 = s1 + s2.as_str();
     // println!("{}", s1);
@@ -120,4 +120,36 @@ pub fn concatenate_string() {
     let ss3 = format!("{} {}", ss1, ss2);
 
     println!("{}", ss3);
+}
+
+pub fn escape_string() {
+    //使用 \ 忽略换行符
+    let s = "hello world
+    你好，少年！
+    世界，\
+    你好！
+    ";
+    println!("{}", s);
+
+    // 若不需要转义 \\x52
+    println!("{}", "ni hao \x52");
+    println!("{}", r"haha \ndd");
+
+    // 如果字符串中有双引号，在开头和结尾加 #，若还有歧义，继续加
+
+    println!("{}", r#"haha: "san""#);
+}
+
+pub fn operate_utf8() {
+    let s = String::from("中国人");
+    // 以 Unicode 字符方式遍历
+    for c in s.chars() {
+        println!("{}", c);
+    }
+
+    // 以 字节 遍历
+
+    for b in s.bytes() {
+        println!("{}", b);
+    }
 }
