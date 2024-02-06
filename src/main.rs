@@ -1,4 +1,5 @@
 pub mod compound_type;
+pub mod contrl_flow;
 pub mod define_display;
 pub mod define_func;
 pub mod define_variable;
@@ -6,6 +7,7 @@ pub mod hello_world;
 pub mod num_library;
 pub mod operate_string;
 pub mod ownership;
+pub mod pattern_match;
 pub mod range_type;
 pub mod reference_borrowing;
 pub mod scalar_type;
@@ -80,5 +82,11 @@ fn main() {
 
     // compound_type::struct_type();
 
-    compound_type::tuple_struct();
+    // compound_type::tuple_struct();
+
+    // contrl_flow::if_control();
+
+    // contrl_flow::for_control();
+
+    pattern_match::match_demo();
 }
