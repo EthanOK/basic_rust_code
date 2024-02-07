@@ -2,9 +2,9 @@ pub mod compound_type;
 pub mod control_flow;
 pub mod define_display;
 pub mod define_func;
+pub mod define_method;
 pub mod define_variable;
 pub mod hello_world;
-pub mod method;
 pub mod num_library;
 pub mod operate_string;
 pub mod ownership;
@@ -97,5 +97,5 @@ fn main() {
 
     // method::caculate_area_struct();
 
-    method::call_enum();
+    define_method::call_enum();
 }
