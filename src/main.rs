@@ -4,6 +4,7 @@ pub mod define_display;
 pub mod define_func;
 pub mod define_variable;
 pub mod hello_world;
+pub mod method;
 pub mod num_library;
 pub mod operate_string;
 pub mod ownership;
@@ -90,5 +91,11 @@ fn main() {
 
     // pattern_match::match_demo();
 
-    pattern_match::matches_demo();
+    // pattern_match::matches_demo();
+
+    // pattern_match::match_mut_ref();
+
+    // method::caculate_area_struct();
+
+    method::call_enum();
 }

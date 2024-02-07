@@ -58,3 +58,18 @@ pub fn matches_demo() {
     }
     println!("{:?}出现了 {} 次", pattern, count);
 }
+
+pub fn match_mut_ref() {
+    let mut s = String::from("hello");
+
+    let v = &mut s;
+    // v be move. because `v` has type `&mut String`,
+    // which does not implement the `Copy` trait
+    match v {
+        value => println!("{:?}", value),
+    }
+
+    // println!("{:?}", v);
+
+    println!("{}", s);
+}
