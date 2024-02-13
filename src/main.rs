@@ -4,6 +4,7 @@ pub mod define_display;
 pub mod define_func;
 pub mod define_method;
 pub mod define_variable;
+pub mod generics_type;
 pub mod hello_world;
 pub mod num_library;
 pub mod operate_string;
@@ -97,5 +98,11 @@ fn main() {
 
     // method::caculate_area_struct();
 
-    define_method::call_enum();
+    // define_method::call_enum();
+
+    // println!("value: {}", generics_type::add(2.6, 7.4));
+
+    let array = [3, 5, 6, 9, 99, 8, 14, 6, 0];
+
+    println!("largest value: {}", generics_type::largest(&array));
 }
