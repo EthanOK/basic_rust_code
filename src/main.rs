@@ -105,4 +105,8 @@ fn main() {
     let array = [3, 5, 6, 9, 99, 8, 14, 6, 0];
 
     println!("largest value: {}", generics_type::largest(&array));
+
+    generics_type::struct_generics();
+
+    generics_type::func_generics();
 }
