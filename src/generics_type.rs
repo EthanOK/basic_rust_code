@@ -59,8 +59,35 @@ impl<T> Point<T> {
         Self { x, y }
     }
 }
+
+// 为具体的泛型类型实现方法
+impl Point<f32> {
+    fn distance_from_origin(&self) -> f32 {
+        (self.x.powi(2) + self.y.powi(2)).sqrt()
+    }
+}
+
 pub fn func_generics() {
     let p0 = Point::new(3.14, 4.55);
 
     println!("p0.x = {}", p0.x());
+
+    let p1 = Point::new(4.0_f32, 3.0_f32);
+
+    println!("p1.distance_from_origin = {}", p1.distance_from_origin());
+}
+
+// const 泛型表达式
+
+fn display_array<T: std::fmt::Debug, const N: usize>(arr: [T; N]) {
+    println!("{:?}", arr);
+    println!("size_of = {}", core::mem::size_of::<[T; N]>());
+}
+
+pub fn print_array() {
+    let arr = [1, 2, 3, 4, 5];
+
+    display_array(arr);
+    let arr = [1.0, 2.0, 3.0];
+    display_array(arr);
 }

@@ -109,4 +109,6 @@ fn main() {
     generics_type::struct_generics();
 
     generics_type::func_generics();
+
+    generics_type::print_array();
 }
