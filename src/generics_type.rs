@@ -1,3 +1,5 @@
+use crate::utils::{size_of, type_of};
+
 /**
  * 泛型 <T>
  */
@@ -81,13 +83,13 @@ pub fn func_generics() {
 
 fn display_array<T: std::fmt::Debug, const N: usize>(arr: [T; N]) {
     println!("{:?}", arr);
-    println!("size_of = {}", core::mem::size_of::<[T; N]>());
+    println!("{} bytes number = {}", type_of(&arr), size_of(&arr));
 }
 
 pub fn print_array() {
     let arr = [1, 2, 3, 4, 5];
 
     display_array(arr);
-    let arr = [1.0, 2.0, 3.0];
+    let arr = [1, 6, 9];
     display_array(arr);
 }
