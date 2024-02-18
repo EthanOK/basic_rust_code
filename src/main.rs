@@ -13,6 +13,7 @@ pub mod pattern_match;
 pub mod range_type;
 pub mod reference_borrowing;
 pub mod scalar_type;
+pub mod trait_rust;
 pub mod type_convert;
 pub mod utils;
 fn main() {
@@ -102,13 +103,15 @@ fn main() {
 
     // println!("value: {}", generics_type::add(2.6, 7.4));
 
-    let array = [3, 5, 6, 9, 99, 8, 14, 6, 0];
+    // let array = [3, 5, 6, 9, 99, 8, 14, 6, 0];
 
-    println!("largest value: {}", generics_type::largest(&array));
+    // println!("largest value: {}", generics_type::largest(&array));
 
-    generics_type::struct_generics();
+    // generics_type::struct_generics();
 
-    generics_type::func_generics();
+    // generics_type::func_generics();
 
-    generics_type::print_array();
+    // generics_type::print_array();
+
+    trait_rust::trait_bound();
 }
