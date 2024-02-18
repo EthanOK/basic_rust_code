@@ -113,5 +113,6 @@ fn main() {
 
     // generics_type::print_array();
 
-    trait_rust::trait_bound();
+    // trait_rust::trait_bound();
+    trait_rust::trait_object();
 }
