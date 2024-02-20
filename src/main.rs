@@ -4,6 +4,7 @@ pub mod define_display;
 pub mod define_func;
 pub mod define_method;
 pub mod define_variable;
+pub mod dyn_array;
 pub mod generics_type;
 pub mod hello_world;
 pub mod num_library;
@@ -114,5 +115,14 @@ fn main() {
     // generics_type::print_array();
 
     // trait_rust::trait_bound();
-    trait_rust::trait_object();
+
+    // trait_rust::trait_object();
+
+    dyn_array::create_vec();
+
+    dyn_array::read_element_vec();
+
+    dyn_array::function_vector();
+
+    dyn_array::sort_vec();
 }
