@@ -8,6 +8,7 @@ pub mod dyn_array;
 pub mod generics_type;
 pub mod hashmap;
 pub mod hello_world;
+pub mod lifetime;
 pub mod num_library;
 pub mod operate_string;
 pub mod ownership;
@@ -127,9 +128,13 @@ fn main() {
 
     // dyn_array::sort_vec();
 
-    hashmap::create_hashmap();
+    // hashmap::create_hashmap();
 
-    hashmap::select_hashmap();
+    // hashmap::select_hashmap();
 
-    hashmap::update_hashmap();
+    // hashmap::update_hashmap();
+
+    lifetime::function_lifetime();
+
+    lifetime::struct_lifetime();
 }
