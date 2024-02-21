@@ -6,6 +6,7 @@ pub mod define_method;
 pub mod define_variable;
 pub mod dyn_array;
 pub mod generics_type;
+pub mod hashmap;
 pub mod hello_world;
 pub mod num_library;
 pub mod operate_string;
@@ -118,11 +119,17 @@ fn main() {
 
     // trait_rust::trait_object();
 
-    dyn_array::create_vec();
+    // dyn_array::create_vec();
 
-    dyn_array::read_element_vec();
+    // dyn_array::read_element_vec();
 
-    dyn_array::function_vector();
+    // dyn_array::function_vector();
 
-    dyn_array::sort_vec();
+    // dyn_array::sort_vec();
+
+    hashmap::create_hashmap();
+
+    hashmap::select_hashmap();
+
+    hashmap::update_hashmap();
 }

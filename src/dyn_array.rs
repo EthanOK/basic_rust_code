@@ -87,6 +87,9 @@ pub fn function_vector() {
     // 清空数组
     v.clear();
 
+    // 附加数据 到 v
+    v.extend([111, 33, 4]);
+
     println!("{:?}", v);
 
     // 静态数组转 动态数组
