@@ -1,5 +1,7 @@
 use std::collections::HashMap;
 
+use crate::utils::vec_to_array;
+
 /**
  * HashMap
  */
@@ -12,14 +14,27 @@ pub fn create_hashmap() {
     map.insert("C", 4);
     println!("{:?}", map);
 
+    // 通过索引返回 value
+    let vv = map["B"];
+    println!("{}", vv);
+
     // iter 和 collect 创建
 
     let team_list = vec![("CHN", 10), ("JP", 5), ("USA", 6)];
 
     // into_iter 将数组转为 迭代器，再通过 collect 收集，需要显式标注 类型
-    let team_map: HashMap<_, _> = team_list.into_iter().collect();
+    let team_map: HashMap<_, _> = team_list.clone().into_iter().collect();
 
     println!("{:?}", team_map);
+
+    let team_list1 = [("CHN", 10), ("JP", 5), ("USA", 6)];
+
+    let team_map2 = HashMap::from(team_list1);
+    println!("{:?}", team_map2);
+
+    let team_list2 = vec_to_array(team_list);
+
+    assert_eq!(team_list2, team_list1);
 }
 
 pub fn select_hashmap() {
