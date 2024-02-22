@@ -6,6 +6,8 @@
  * 函数的返回值如果是一个引用类型,那么他的生命周期只来源于：
  * 1. 函数参数的生命周期
  * 2. 函数体中某个新建引用的生命周期
+ *
+ * 'a: 'b 表示 'a 比 'b 活得久
  */
 
 pub fn learn_lifetime() {
@@ -52,4 +54,23 @@ pub fn struct_lifetime() {
     };
 
     println!("student = {:?}", student);
+}
+
+pub fn static_lifetime() {
+    let s = "hello";
+    let v = {
+        let s1 = "world!";
+        (s1.as_ptr() as usize, s1.len())
+
+        // 变量 s1 的生命周期结束了；对于字符串字面量，直接被打包到二进制文件中，永远不会被 drop
+    };
+    let s2 = get_str_at_location(v.0, v.1);
+    println!("s2 = {}", s2);
+}
+fn get_str_at_location(pointer: usize, len: usize) -> &'static str {
+    unsafe {
+        let slice = std::slice::from_raw_parts(pointer as *const u8, len);
+        std::str::from_utf8_unchecked(slice)
+        // 得到的 字符串字面量 的生命周期需要显示标明 'static
+    }
 }
