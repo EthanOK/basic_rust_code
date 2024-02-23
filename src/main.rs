@@ -1,6 +1,6 @@
 use std::error::Error;
 
-use basic_rust_code::basic::{
+use rust_course::basic::{
     compound_type, control_flow, define_display, define_func, define_method, define_variable,
     dyn_array, generics_type, hashmap, hello_world, lifetime, num_library, operate_string,
     ownership, pattern_match, range_type, reference_borrowing, result_error, scalar_type,
