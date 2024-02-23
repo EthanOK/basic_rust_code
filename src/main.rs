@@ -1,3 +1,5 @@
+use std::error::Error;
+
 pub mod compound_type;
 pub mod control_flow;
 pub mod define_display;
@@ -15,11 +17,12 @@ pub mod ownership;
 pub mod pattern_match;
 pub mod range_type;
 pub mod reference_borrowing;
+pub mod result_error;
 pub mod scalar_type;
 pub mod trait_rust;
 pub mod type_convert;
 pub mod utils;
-fn main() {
+fn main() -> Result<(), Box<dyn Error>> {
     println!("Start Rust:");
 
     // hello_world::greet_world();
@@ -134,7 +137,19 @@ fn main() {
 
     // hashmap::update_hashmap();
 
-    lifetime::function_lifetime();
+    // lifetime::function_lifetime();
 
-    lifetime::struct_lifetime();
+    // lifetime::struct_lifetime();
+
+    // result_error::panic_demo();
+
+    // result_error::result_demo();
+
+    // result_error::panic_unwrap_demo();
+
+    // result_error::panic_expect_demo();
+
+    result_error::wenhao_demo();
+
+    Ok(())
 }
