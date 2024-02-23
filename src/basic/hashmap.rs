@@ -1,6 +1,6 @@
 use std::collections::HashMap;
 
-use crate::utils::vec_to_array;
+use crate::basic::utils::vec_to_array;
 
 /**
  * HashMap

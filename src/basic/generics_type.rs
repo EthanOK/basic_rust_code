@@ -1,4 +1,4 @@
-use crate::utils::{size_of, type_of};
+use crate::basic::utils::{size_of, type_of};
 
 /**
  * 泛型 <T>

@@ -1,27 +1,12 @@
 use std::error::Error;
 
-pub mod compound_type;
-pub mod control_flow;
-pub mod define_display;
-pub mod define_func;
-pub mod define_method;
-pub mod define_variable;
-pub mod dyn_array;
-pub mod generics_type;
-pub mod hashmap;
-pub mod hello_world;
-pub mod lifetime;
-pub mod num_library;
-pub mod operate_string;
-pub mod ownership;
-pub mod pattern_match;
-pub mod range_type;
-pub mod reference_borrowing;
-pub mod result_error;
-pub mod scalar_type;
-pub mod trait_rust;
-pub mod type_convert;
-pub mod utils;
+use basic_rust_code::basic::{
+    compound_type, control_flow, define_display, define_func, define_method, define_variable,
+    dyn_array, generics_type, hashmap, hello_world, lifetime, num_library, operate_string,
+    ownership, pattern_match, range_type, reference_borrowing, result_error, scalar_type,
+    trait_rust, type_convert,
+};
+
 fn main() -> Result<(), Box<dyn Error>> {
     println!("Start Rust:");
 
@@ -103,7 +88,7 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     // pattern_match::match_mut_ref();
 
-    // method::caculate_area_struct();
+    // define_method::caculate_area_struct();
 
     // define_method::call_enum();
 
