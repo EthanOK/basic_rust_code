@@ -1,5 +1,5 @@
-/*
- * method: impl 结构体 枚举 特征(Trait)
+/*!
+# method: impl 结构体 枚举 特征(Trait)
  *
  * &self 是 self:&Self 的缩写（Self 被实现方法的结构体类型，self 此类型的实例）
  *

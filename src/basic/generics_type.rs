@@ -1,8 +1,8 @@
-use crate::basic::utils::{size_of, type_of};
-
-/**
- * 泛型 <T>
+/*!
+# 泛型 <T>
  */
+
+use crate::basic::utils::{size_of, type_of};
 
 pub fn add<T: std::ops::Add<Output = T>>(a: T, b: T) -> T {
     a + b

@@ -1,10 +1,11 @@
+/*!
+# HashMap
+ */
+
 use std::collections::HashMap;
 
-use crate::basic::utils::vec_to_array;
-
-/**
- * HashMap
- */
+// super 代表的是父模块为开始的引用方式
+use super::utils::vec_to_array;
 
 pub fn create_hashmap() {
     // new()

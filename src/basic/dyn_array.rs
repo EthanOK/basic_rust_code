@@ -1,10 +1,10 @@
-use crate::basic::utils::size_of;
-
-/**
- * 动态数组 Vector
+/*!
+# 动态数组 Vector
  *
  * Vec<T> 是一个泛型类型, T 是类型参数，表示该类型可以存储任意类型的值。
  */
+
+use crate::basic::utils::size_of;
 
 pub fn create_vec() {
     // a 被显式声明

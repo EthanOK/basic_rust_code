@@ -19,4 +19,5 @@ pub mod result_error;
 pub mod scalar_type;
 pub mod trait_rust;
 pub mod type_convert;
+pub mod use_mod;
 pub mod utils;

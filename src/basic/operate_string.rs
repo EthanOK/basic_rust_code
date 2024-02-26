@@ -1,28 +1,30 @@
-/*
-push: 在原有字符串上追加，并不会返回新字符串
+/*!
+# 字符串操作
+
+## push: 在原有字符串上追加，并不会返回新字符串
     1.push_str 追加字符串
     2.push 追加 char
 
-insert: 在原有字符串中插入，并不会返回新字符串,索引从0开始，越界则报错
+## insert: 在原有字符串中插入，并不会返回新字符串,索引从0开始，越界则报错
     1.insert_str 插入字符串
     2.insert 插入 char
 
-replace: 替换字符串
+## replace: 替换字符串
     1. 使用 replace_range(index, ""), 仅适用于 String, 直接操作原来的字符串，不返回
     2. 使用 replace(old, new), 返回新的字符串(String),适用于String和&str
     3. 使用 replacen(old, new, count), count 表示替换的数量. 返回新的字符串(String),适用于String和&str
 
- delete: 删除字符串
+ ## delete: 删除字符串
     1. 使用 pop(), 删除最后一个 char，并返回 char。直接操作原来的字符串
     2. 使用 remove(index), 删除并返回字符串中指定位置的char，直接操作原来的字符串
     3. 使用 truncate(index), 删除字符串中指定位置至结尾的全部字符串, 无返回值，直接操作原来的字符串
     4. 使用 clear(), 清空字符串,，直接操作原来的字符串，= truncate(0)
 
-concatenate: 连接字符串
+## concatenate: 连接字符串
     1. 使用 +, 返回新的字符串, String + &str
     2. 使用 format!(), 返回新的字符串, 适用于 String 和 &str
 
- */
+*/
 
 use std::mem::size_of_val;
 
