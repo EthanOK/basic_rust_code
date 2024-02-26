@@ -2,9 +2,9 @@ use std::error::Error;
 
 use rust_course::basic::{
     compound_type, control_flow, define_display, define_func, define_method, define_variable,
-    dyn_array, generics_type, hashmap, hello_world, lifetime, num_library, operate_string,
-    ownership, pattern_match, range_type, reference_borrowing, result_error, scalar_type,
-    trait_rust, type_convert, use_mod,
+    dyn_array, format_rust, generics_type, hashmap, hello_world, lifetime, num_library,
+    operate_string, ownership, pattern_match, range_type, reference_borrowing, result_error,
+    scalar_type, trait_rust, type_convert, use_mod,
 };
 
 fn main() -> Result<(), Box<dyn Error>> {
@@ -136,7 +136,11 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     // result_error::wenhao_demo();
 
-    use_mod::get_random(1, 200);
+    // use_mod::get_random(1, 200);
+
+    format_rust::format_to_string();
+
+    format_rust::format_struct();
 
     Ok(())
 }
