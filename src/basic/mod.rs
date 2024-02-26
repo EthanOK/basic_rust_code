@@ -5,6 +5,7 @@ pub mod define_func;
 pub mod define_method;
 pub mod define_variable;
 pub mod dyn_array;
+pub mod format_rust;
 pub mod generics_type;
 pub mod hashmap;
 pub mod hello_world;
