@@ -118,6 +118,7 @@ impl fmt::Display for Array {
 为外部类型实现 Display 特征
 `````
 struct Array(Vec<i32>);
+
 impl fmt::Display for Array {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         write!(f, "{:?}", self.0)
