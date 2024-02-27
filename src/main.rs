@@ -138,9 +138,13 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     // use_mod::get_random(1, 200);
 
-    format_rust::format_to_string();
+    // format_rust::format_to_string();
 
-    format_rust::format_struct();
+    // format_rust::format_struct();
+
+    format_rust::custom_display();
+
+    format_rust::external_display();
 
     Ok(())
 }

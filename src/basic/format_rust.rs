@@ -20,6 +20,8 @@ format! 将格式化文本输出到 String 字符串
 ## {:#?}
 */
 
+use core::fmt;
+
 /**
 # format!
 `格式化文本输出到 String 字符串，返回一个 String 字符串`
@@ -70,4 +72,62 @@ pub fn format_struct() {
 
     println!("{:?}", person);
     println!("{:#?}", person);
+}
+
+struct Student {
+    name: String,
+    id: i32,
+}
+
+impl fmt::Display for Student {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        write!(f, "my name is {}, my id is {}.", self.name, self.id)
+    }
+}
+/**
+为自定义类型实现 Display 特征
+
+`````
+struct Student {
+    name: String,
+    id: i32,
+}
+
+impl fmt::Display for Student {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        write!(f, "my name is {}, my id is {}.", self.name, self.id)
+    }
+}
+`````
+ */
+pub fn custom_display() {
+    let student = Student {
+        name: String::from("san"),
+        id: 20240127,
+    };
+    println!("{}", student);
+}
+
+struct Array(Vec<i32>);
+impl fmt::Display for Array {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        write!(f, "{:?}", self.0)
+    }
+}
+/**
+为外部类型实现 Display 特征
+`````
+struct Array(Vec<i32>);
+impl fmt::Display for Array {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        write!(f, "{:?}", self.0)
+    }
+}
+`````
+ */
+
+pub fn external_display() {
+    let array = Array(vec![1, 2, 3, 4, 5]);
+
+    println!("{}", array);
 }
